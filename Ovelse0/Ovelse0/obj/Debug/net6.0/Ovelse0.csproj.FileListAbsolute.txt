@@ -1,0 +1,15 @@
+C:\Users\zbcrafe\source\repos\Ovelse0\Ovelse0\bin\Debug\net6.0\Ovelse0.exe
+C:\Users\zbcrafe\source\repos\Ovelse0\Ovelse0\bin\Debug\net6.0\Ovelse0.deps.json
+C:\Users\zbcrafe\source\repos\Ovelse0\Ovelse0\bin\Debug\net6.0\Ovelse0.runtimeconfig.json
+C:\Users\zbcrafe\source\repos\Ovelse0\Ovelse0\bin\Debug\net6.0\Ovelse0.dll
+C:\Users\zbcrafe\source\repos\Ovelse0\Ovelse0\bin\Debug\net6.0\Ovelse0.pdb
+C:\Users\zbcrafe\source\repos\Ovelse0\Ovelse0\obj\Debug\net6.0\Ovelse0.csproj.AssemblyReference.cache
+C:\Users\zbcrafe\source\repos\Ovelse0\Ovelse0\obj\Debug\net6.0\Ovelse0.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\zbcrafe\source\repos\Ovelse0\Ovelse0\obj\Debug\net6.0\Ovelse0.AssemblyInfoInputs.cache
+C:\Users\zbcrafe\source\repos\Ovelse0\Ovelse0\obj\Debug\net6.0\Ovelse0.AssemblyInfo.cs
+C:\Users\zbcrafe\source\repos\Ovelse0\Ovelse0\obj\Debug\net6.0\Ovelse0.csproj.CoreCompileInputs.cache
+C:\Users\zbcrafe\source\repos\Ovelse0\Ovelse0\obj\Debug\net6.0\Ovelse0.dll
+C:\Users\zbcrafe\source\repos\Ovelse0\Ovelse0\obj\Debug\net6.0\refint\Ovelse0.dll
+C:\Users\zbcrafe\source\repos\Ovelse0\Ovelse0\obj\Debug\net6.0\Ovelse0.pdb
+C:\Users\zbcrafe\source\repos\Ovelse0\Ovelse0\obj\Debug\net6.0\Ovelse0.genruntimeconfig.cache
+C:\Users\zbcrafe\source\repos\Ovelse0\Ovelse0\obj\Debug\net6.0\ref\Ovelse0.dll
