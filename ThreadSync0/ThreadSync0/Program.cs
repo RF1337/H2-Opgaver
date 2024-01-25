@@ -1,6 +1,6 @@
 ﻿using System.Diagnostics.CodeAnalysis;
 
-namespace ThreadSync
+namespace ThreadSync0
 {
     internal class Program
     {

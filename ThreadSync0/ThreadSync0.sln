@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.4.33103.184
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ThreadSync", "ThreadSync\ThreadSync.csproj", "{A34253EA-55CB-47F5-93FE-908360F3E07A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ThreadSync0", "ThreadSync0\ThreadSync0.csproj", "{39AD8741-A1FF-4FA7-A037-4C38961EDF0E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,15 +11,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{A34253EA-55CB-47F5-93FE-908360F3E07A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{A34253EA-55CB-47F5-93FE-908360F3E07A}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{A34253EA-55CB-47F5-93FE-908360F3E07A}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{A34253EA-55CB-47F5-93FE-908360F3E07A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{39AD8741-A1FF-4FA7-A037-4C38961EDF0E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{39AD8741-A1FF-4FA7-A037-4C38961EDF0E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{39AD8741-A1FF-4FA7-A037-4C38961EDF0E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{39AD8741-A1FF-4FA7-A037-4C38961EDF0E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {666C498B-CAAE-43CC-A00E-DD4A60E9050E}
+		SolutionGuid = {76F8BB9F-7E33-47A9-815E-25F6550A6CFF}
 	EndGlobalSection
 EndGlobal
