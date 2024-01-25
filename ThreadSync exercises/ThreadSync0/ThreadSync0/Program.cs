@@ -8,9 +8,10 @@ namespace ThreadSync0
 
         static void Main(string[] args)
         {
-            // Creating threads 
+            // Creating threads array
             Thread[] threads = new Thread[1000];
 
+            // Creating the threads and running the method AddOne for every thread in the array
             for (int i = 0; i < threads.Length; i++)
             {
                 threads[i] = new Thread(AddOne);
