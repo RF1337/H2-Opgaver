@@ -5,7 +5,7 @@
         static int SymbolCount = 0;
         object _lock = new object();
 
-        // Method for printing *
+        // Method for printing 
         public void PrintStars()
         {
             while (true)
