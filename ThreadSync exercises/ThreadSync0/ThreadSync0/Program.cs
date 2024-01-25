@@ -8,6 +8,7 @@ namespace ThreadSync0
 
         static void Main(string[] args)
         {
+            // Creating threads 
             Thread[] threads = new Thread[1000];
 
             for (int i = 0; i < threads.Length; i++)
