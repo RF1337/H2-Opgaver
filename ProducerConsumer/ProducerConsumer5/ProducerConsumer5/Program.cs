@@ -8,7 +8,6 @@
         public void Produce()
         {
             int item = 0;
-
             while (true)
             {
                 lock (_lock)
