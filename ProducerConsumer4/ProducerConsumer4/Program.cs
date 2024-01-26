@@ -7,7 +7,6 @@
         public void Produce()
         {
             int count = 0;
-
             while (true)
             {
                 Thread.Sleep(1000);
