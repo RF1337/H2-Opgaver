@@ -8,11 +8,13 @@ namespace LuggageSorting.Model
 {
     internal class Luggage
     {
-        public int LuggageNumber { get; set; }
+        public int LuggageId { get; set; }
+        public int FlightNumber { get; set; }
 
-        public Luggage(int luggageNumber)
+        public Luggage(int luggageId, int flightNumber)
         {
-            LuggageNumber = luggageNumber;
+            LuggageId = luggageId;
+            FlightNumber = flightNumber;
         }
     }
 }

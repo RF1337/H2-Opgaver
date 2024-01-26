@@ -8,18 +8,25 @@ namespace LuggageSorting.Model
 {
     internal class Flight
     {
-        public DateTime DepartureTime = new DateTime();
         public int FlightNumber { get; set; }
-        public string Destination { get; set; } = "";
+        public FD Destination { get; set; }
 
-        public Queue<Luggage> LuggageList { get; set; }
+        public Queue<Luggage> LuggageQueue { get; set; }
 
-        public Flight(DateTime departureTime, int flightNumber, string destination)
+        public enum FD
         {
-            DepartureTime = departureTime;
+            Copenhagen,
+            Frankfurt,
+            Paris,
+            London, 
+            Moscow
+        }
+
+        public Flight(int flightNumber, FD destination)
+        {
             FlightNumber = flightNumber;
             Destination = destination;
-            LuggageList = new Queue<Luggage>();
+            LuggageQueue = new Queue<Luggage>();
         }
     }
 }

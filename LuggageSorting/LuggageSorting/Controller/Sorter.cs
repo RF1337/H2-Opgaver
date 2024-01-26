@@ -1,4 +1,5 @@
 ﻿using LuggageSorting.Model;
+using LuggageSorting.View;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,25 +10,39 @@ namespace LuggageSorting.Controller
 {
     internal class Sorter
     {
-        private Queue<Luggage> sortedLuggage = new Queue<Luggage>();
-        
-        /// <summary>
-        /// Adds unsorted luggage to a queue of sortedLuggage
-        /// </summary>
-        /// <param name="luggage"></param>
-        public void SortLuggage(Luggage luggage)
+        public Queue<Luggage> unsortedLuggage = new Queue<Luggage>();
+
+        public Sorter(GuiService guiService)
         {
-            // Maybe do it based on flight details
-            sortedLuggage.Enqueue(luggage);
+            guiService = GuiService.Instance;
         }
 
-        public void AssignLuggageToFlight(Flight flight, Luggage luggage)
+        /// <summary>
+        /// Takes luggage and assigns it to it's respective flight from the flights list
+        /// </summary>
+        /// <param name="flights"></param>
+        public void AssignLuggageToFlightProducerConsumer(List<Flight> flights)
         {
-            // Check if belongs to flight and then add it to the queue
-            flight.LuggageQueue.Enqueue(luggage);
-
-            // Removing the luggage from sorted luggage list after it has been added to the flight's luggage list
-            sortedLuggage.Dequeue();
+            while (true)
+            {
+                lock (unsortedLuggage)
+                {
+                    while (unsortedLuggage.Count == 0)
+                    {
+                        Monitor.Wait(unsortedLuggage);
+                    }
+                }
+                Luggage luggage = unsortedLuggage.Dequeue();
+                foreach (Flight flight in flights)
+                {
+                    if (flight.FlightNumber == luggage.FlightNumber)
+                    {
+                        flight.LuggageQueue.Enqueue(luggage);
+                        GuiService.Instance.PrintMessage($"Luggage with ID: {luggage.LuggageId} assigned to flight {flight.FlightNumber} and is on it's way to {flight.Destination}");
+                        break;
+                    }
+                }
+            }
         }
     }
 }

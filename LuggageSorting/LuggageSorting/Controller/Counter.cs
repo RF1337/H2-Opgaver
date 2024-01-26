@@ -1,6 +1,8 @@
 ﻿using LuggageSorting.Model;
+using LuggageSorting.View;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.Design;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -9,28 +11,40 @@ namespace LuggageSorting.Controller
 {
     internal class Counter
     {
-        // count acts as an id to track the luggageNumber
-        int id = 0;
-        private Queue<Luggage> checkedInLuggage = new Queue<Luggage>();
+        Sorter sorter = new Sorter(GuiService.Instance);
+
+        public Counter(Sorter sorter, GuiService guiService)
+        {
+            guiService = GuiService.Instance;
+            this.sorter = sorter;
+        }
+
+        // Doesn't actually work, just to show how I would make it if there was an ability to open or close the counter
+        bool hasCheckedIn = false;
 
         // Method for checking in
         /// <summary>
-        /// Adds luggage to a list of checkedInLuggage
+        /// Gives unsorted luggage to the sorter
         /// </summary>
         /// <param name="flight"></param>
-        public void CheckIn(Flight flight)
+        public void CheckInProducer(List<Luggage> luggageList)
         {
-            id++;
-            Model.Luggage luggage = new Luggage(id);
-            checkedInLuggage.Enqueue(luggage);
-        }
-
-        public void TransferLuggageToSorter(Sorter sorter)
-        {
-            foreach (Luggage luggage in checkedInLuggage)
+            while (true)
             {
-                sorter.SortLuggage(luggage);
-                checkedInLuggage.Dequeue();
+                lock (sorter.unsortedLuggage)
+                {
+                    while (hasCheckedIn == true)
+                    {
+                        Monitor.Wait(sorter.unsortedLuggage);
+                    }
+                    foreach (Luggage luggage in luggageList)
+                    {
+                        sorter.unsortedLuggage.Enqueue(luggage);
+                        GuiService.Instance.PrintMessage($"Luggage with ID: {luggage.LuggageId} checked in");
+                    }
+                    hasCheckedIn = true;
+                    Monitor.Pulse(sorter.unsortedLuggage);
+                }
             }
         }
     }
